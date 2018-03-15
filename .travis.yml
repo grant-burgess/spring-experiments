@@ -1,3 +1,6 @@
 language: java
 jdk: oraclejdk8
+before_install:
+  # ensure gradlew has proper permission
+  - chmod a+x spring-cloud-stream-rabbit/retry-with-dead-letter-queue/gradlew
 script: cd spring-cloud-stream-rabbit/retry-with-dead-letter-queue && ./gradlew build
